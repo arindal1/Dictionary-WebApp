@@ -22,8 +22,7 @@ The Dictionary WebApp is a user-friendly online tool designed to provide users w
 - HTML
 - CSS
 - JavaScript
-- [Font Awesome](https://fontawesome.com/)
-- [Google Fonts](https://fonts.google.com/)
+- [DictionaryAPI](https://dictionaryapi.dev/)
 
 ## Getting Started
 
