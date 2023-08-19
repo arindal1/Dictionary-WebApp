@@ -28,28 +28,6 @@ Ever wanted a quick and easy way to look up word definitions and pronunciations?
 📝 **Example Usage:** Context is key! Discover how the word is used in sentences to deepen your understanding.
 
 
-**API Integration:**
-
-To power the word search functionality, we've integrated the Free Dictionary API. This API provides the information needed to enrich your vocabulary and language exploration.
-
-📖 Learn more about the API: [Dictionary API](https://dictionaryapi.dev/)
-
-**Contributions Welcome:**
-
-Open-source contributions are always welcome! If you're interested in enhancing this tool, feel free to fork the repository and submit your pull requests. Let's collaborate and make this resource even better for language enthusiasts!
-
-🚀 **Project Repository:** [Dictionary-WebApp](https://github.com/arindal1/Dictionary-WebApp)
-
-Thank you for taking the time to explore this project. Feel free to share your thoughts, suggestions, and feedback. Happy exploring words with the Dictionary WebApp!
-
-Best regards,
-[Your Name]
-[Twitter Handle / Contact Email]
-
----
-
-Feel free to personalize this note by replacing "[Your Name]" and "[Twitter Handle / Contact Email]" with your actual information. You can use this note on social media, project documentation, or anywhere you'd like to introduce and showcase your Dictionary WebApp.
-
 ### Built With
 
 - HTML
