@@ -67,6 +67,92 @@ To power the word search functionality, we've integrated the Free Dictionary API
 
 ![Screenshot](images/screenshot2.png)
 
+## The Code
+
+Let's break down the JavaScript code in the `script.js` file step by step:
+
+1. **Defining Variables**:
+   ```javascript
+   const url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
+   const result = document.getElementById("result");
+   const sound = document.getElementById("sound");
+   const btn = document.getElementById("search-btn");
+   ```
+
+   - `url`: This variable holds the URL of the dictionary API, which is used to fetch word definitions.
+   - `result`: This variable stores the DOM element with the ID "result", which is where the word definition and related information will be displayed.
+   - `sound`: This variable represents an HTML `<audio>` element with the ID "sound", used to play the audio pronunciation of the word.
+   - `btn`: This variable represents the search button element with the ID "search-btn".
+
+2. **Adding Event Listener to Search Button**:
+   ```javascript
+   btn.addEventListener("click", () => {
+       let inpWord = document.getElementById("inp-word").value;
+       // Fetch the word data from the API based on the input word
+       fetch(`${url}${inpWord}`)
+           .then((response) => response.json())
+           .then((data) => {
+               // Handle the fetched data and update the result section
+               // ...
+           })
+           .catch(() => {
+               result.innerHTML = `<h3 class="error">Couldn't Find The Word</h3>`;
+           });
+   });
+   ```
+
+   - This code adds a click event listener to the search button. When the button is clicked, the following actions occur:
+   - The value of the input field with the ID "inp-word" is retrieved and stored in the `inpWord` variable.
+   - A `fetch` request is made to the dictionary API using the provided URL and the input word.
+   - If the API request is successful, the response is parsed as JSON and passed to the first `.then()` function.
+   - The fetched data is then processed and displayed in the result section.
+
+3. **Updating the Result Section with Fetched Data**:
+   ```javascript
+   result.innerHTML = `
+       <div class="word">
+           <h3>${inpWord}</h3>
+           <button onclick="playSound()">
+               <i class="fas fa-volume-up"></i>
+           </button>
+       </div>
+       <div class="details">
+           <p>${data[0].meanings[0].partOfSpeech}</p>
+           <p>/${data[0].phonetic}/</p>
+       </div>
+       <p class="word-meaning">
+           ${data[0].meanings[0].definitions[0].definition}
+       </p>
+       <p class="word-example">
+           ${data[0].meanings[0].definitions[0].example || ""}
+       </p>`;
+   sound.setAttribute("src", `https:${data[0].phonetics[0].audio}`);
+   ```
+
+   - This code updates the HTML content of the `result` element with the fetched data.
+   - It creates various HTML elements to display the word, its part of speech, pronunciation, definition, and example usage.
+   - The audio pronunciation source is set using the `setAttribute` method.
+
+4. **playSound() Function**:
+   ```javascript
+   function playSound() {
+       sound.play();
+   }
+   ```
+
+   - This function plays the audio pronunciation of the word using the `.play()` method on the `sound` element.
+
+5. **Error Handling**:
+   ```javascript
+   .catch(() => {
+       result.innerHTML = `<h3 class="error">Couldn't Find The Word</h3>`;
+   });
+   ```
+
+   - If the API request fails (e.g., the word isn't found), an error message is displayed in the result section.
+
+Overall, the JavaScript code fetches data from the API, processes it, and updates the HTML content of the result section with information about the searched word, including its definition, part of speech, and pronunciation.
+
 ## Roadmap
 
 See the [open issues](https://github.com/arindal1/Dictionary-WebApp/issues) for a list of proposed features (and known issues).
@@ -98,3 +184,6 @@ If you have any questions, suggestions, or just want to connect, feel free to re
 
 ## Note
 
+This is a personal project created for educational and demonstrative purposes. I made this project just for fun and learn more about JavaScript and APIs in the process, and record my progress in development.
+
+### Happy learning and programming! ⛄
