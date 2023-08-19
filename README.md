@@ -177,13 +177,13 @@ If you have any questions, suggestions, or just want to connect, feel free to re
 ## Resources
 
 - DictionaryAPI provided by [Free Dictionary](https://dictionaryapi.dev/).
-- Fonts from the project: [Font Awesome](https://fontawesome.com/), [Google Fonts](https://fonts.google.com/)
+- Fonts from the project: [Font Awesome](https://fontawesome.com/), [Google Fonts](https://fonts.google.com/).
 
 ## Project link
 [Dictionary WebApp](https://github.com/arindal1/Dictionary-WebApp)
 
-## Note
 
-This is a personal project created for educational and demonstrative purposes. I made this project just for fun and learn more about JavaScript and APIs in the process, and record my progress in development.
+**Note:** This is a personal project created for educational and demonstrative purposes. I made this project just for fun and learn more about JavaScript and APIs in the process, and record my progress in development.
 
+---
 ### Happy learning and programming! ⛄
